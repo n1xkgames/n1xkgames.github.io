@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>n1xkgames — Luxury Game Studio Portfolio</title>
+  <meta name="description" content="n1xkgames — luxury gaming studio portfolio by N1xk / Niko. UI design, scripting, secure vault archive, and the upcoming title Vessel of Bound." />
+  <meta name="theme-color" content="#0A0A0B" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,800;0,900;1,500&family=JetBrains+Mono:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Ambient fixed background layers: fine grid + deep crimson auras + vignette -->
+  <div class="page-bg" aria-hidden="true">
+    <div class="page-bg__grid"></div>
+    <div class="page-bg__aura page-bg__aura--top"></div>
+    <div class="page-bg__aura page-bg__aura--bottom"></div>
+    <div class="page-bg__vignette"></div>
+  </div>
+
+  <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+
+  <!-- Custom cursor (fine pointers only) -->
+  <div class="cursor" id="cursor" aria-hidden="true"><span class="cursor__dot"></span></div>
+
+  <!-- ================= NAVIGATION ================= -->
+  <header class="nav" id="header" role="banner">
+    <div class="nav__inner">
+      <a class="nav__logo" href="#hero">n1xkgames<span class="accent">.</span></a>
+
+      <nav class="nav__links" aria-label="Primary">
+        <a class="nav__link" href="#about"><span class="nav__idx">01</span>About</a>
+        <a class="nav__link" href="#vault"><span class="nav__idx">02</span>Vault</a>
+        <a class="nav__link" href="#studios"><span class="nav__idx">03</span>Studios</a>
+        <a class="nav__link" href="#games"><span class="nav__idx">04</span>Games</a>
+        <a class="nav__link" href="#contact"><span class="nav__idx">05</span>Contact</a>
+      </nav>
+
+      <button class="nav__toggle" id="menuToggle" type="button" aria-label="Toggle menu" aria-expanded="false">
+        <span class="nav__toggle-line"></span>
+        <span class="nav__toggle-line"></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile overlay menu -->
+  <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+    <nav class="mobile-menu__nav" aria-label="Mobile">
+      <a class="m-link" href="#about"><span class="nav__idx">01</span>About</a>
+      <a class="m-link" href="#vault"><span class="nav__idx">02</span>Vault</a>
+      <a class="m-link" href="#studios"><span class="nav__idx">03</span>Studios</a>
+      <a class="m-link" href="#games"><span class="nav__idx">04</span>Games</a>
+      <a class="m-link" href="#contact"><span class="nav__idx">05</span>Contact</a>
+    </nav>
+    <p class="mobile-menu__foot">Luxury Game Studio — est. N1xk</p>
+  </div>
+
+  <!-- ================= HERO ================= -->
+  <section class="hero" id="hero" aria-label="N1XKGAMES — luxury gaming studio">
+    <div class="hero__glow" aria-hidden="true"></div>
+
+    <div class="hero__content">
+      <p class="hero__eyebrow"><span class="hero__rule" aria-hidden="true"></span> Luxury Gaming Studio — Portfolio</p>
+
+      <h1 class="hero__title" id="heroTitle" aria-label="N1XKGAMES">
+        <span class="hero__title-stroke" aria-hidden="true">N1XKGAMES</span>
+        <span class="hero__title-fill" aria-hidden="true">N1XKGAMES</span>
+      </h1>
+
+      <div class="hero__meta">
+        <p class="hero__desc">UI &amp; Experience — by N1xk / Niko. Design first, script second.</p>
+        <p class="hero__tags"><span>Design</span><span class="sep">/</span><span>Script</span><span class="sep">/</span><span>Roblox</span></p>
+        <a class="btn btn-solid hero__cta" href="#vault">
+          Enter the Vault
+          <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" /></svg>
+        </a>
+      </div>
+    </div>
+
+    <div class="hero__foot">
+      <span class="hero__coord">5R.6V — BLDG N1XK</span>
+      <span class="hero__scroll">Scroll <em class="hero__scroll-line" aria-hidden="true"></em></span>
+      <span class="hero__coord">EST. 2019</span>
+    </div>
+  </section>
+
+  <main>
+
+    <!-- ================= ABOUT ================= -->
+    <section class="section about" id="about">
+      <div class="section-head">
+        <p class="sec-label"><span class="sec-label__num">01</span> Profile</p>
+        <h2 class="sec-title" data-mask>About Me</h2>
+      </div>
+
+      <div class="about__grid">
+        <div class="about__stamp" data-parallax="6" aria-hidden="true">
+          <span class="about__stamp-word">N1XK</span>
+          <span class="about__stamp-line"></span>
+        </div>
+
+        <div class="about__body">
+          <p class="about__lead" data-mask="words">Hello, I'm N1xk or Niko. I love UI making, i'm learning scripting. More Details at my Social Hub Link! Roblox Design</p>
+          <a class="btn btn-ghost about__btn" href="https://guns.lol/n1xkgames" target="_blank" rel="noopener">
+            Open Social Hub
+            <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8" /></svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+  <!-- ================= SECURE VAULT ================= -->
+    <section class="section vault" id="vault">
+      <div class="section-head">
+        <p class="sec-label"><span class="sec-label__num">02</span> Archive &amp; Uploads</p>
+        <h2 class="sec-title" data-mask>Secure Vault</h2>
+      </div>
+
+      <!-- Upload authorization modal (the gallery itself is public) -->
+      <div class="vault-modal" id="vaultModal" aria-hidden="true">
+        <div class="vault-modal__backdrop" data-vault-close></div>
+        <div class="lock-card" id="lockCard" role="dialog" aria-modal="true" aria-labelledby="lockTitle">
+          <button class="lock-card__close" id="modalClose" type="button" aria-label="Close authorization">&times;</button>
+          <div class="lock-card__top">
+            <span class="lock-emblem" aria-hidden="true">SV</span>
+            <p class="lock-status" id="lockStatus">
+              <span class="lock-status__dot" aria-hidden="true"></span> Access Restricted
+            </p>
+          </div>
+
+          <h3 class="lock-title" id="lockTitle">Authentication Required</h3>
+          <p class="lock-sub">Uploads are restricted to the studio owner. Enter your credentials to authorize posting to this archive.</p>
+
+          <form class="lock-form" id="vaultForm" novalidate>
+            <div class="field">
+              <label class="field__label" for="vaultName">Name</label>
+              <input class="field__input" id="vaultName" name="name" type="text" placeholder="N1xk" autocomplete="off" spellcheck="false" />
+            </div>
+            <div class="field">
+              <label class="field__label" for="vaultPass">Password</label>
+              <div class="field__wrap">
+                <input class="field__input" id="vaultPass" name="password" type="password" placeholder="••••••••••••" autocomplete="off" />
+                <button class="field__toggle" id="passToggle" type="button">Show</button>
+              </div>
+            </div>
+            <button class="btn btn-solid btn-block" type="submit">
+              Unlock Vault
+              <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 3h10a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2zM9 11h6M9 15h4" /></svg>
+            </button>
+          </form>
+
+          <p class="lock-toast" id="vaultToast" role="alert" aria-live="polite"></p>
+          <p class="lock-hint">Authorized upload clearance — N1xk only</p>
+        </div>
+      </div>
+
+      <!-- Upload bar — open to everyone for viewing -->
+      <div class="vault-bar" data-fade>
+        <div>
+          <p class="vault-bar__title">Archive Contents — Open to View</p>
+          <p class="vault-bar__meta" id="uploadStatusText">Public gallery · uploads require authorized clearance</p>
+        </div>
+        <button class="btn btn-ghost btn-sm" id="uploadOpen" type="button">
+          <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 15V5m0 0l-4.5 4.5M12 5l4.5 4.5"/><path d="M4 16v3.5A1.5 1.5 0 0 0 5.5 21h13a1.5 1.5 0 0 0 1.5-1.5V16"/></svg>
+          Upload Media
+        </button>
+      </div>
+
+      <!-- Upload dropzone — unlocks only with authorized clearance -->
+      <div class="upload-zone" id="uploadZone" hidden>
+        <input type="file" id="uploadInput" accept="image/*,video/*" multiple />
+        <p class="upload-zone__label">Upload — Photos · Videos</p>
+        <p class="upload-zone__text">Drag &amp; drop files here, or browse your device.</p>
+        <button class="btn btn-solid btn-sm" id="uploadPick" type="button">Browse Files</button>
+      </div>
+
+      <!-- Gallery — always visible to everyone -->
+      <div class="vault__gallery" id="vaultGallery">
+        <div class="gallery-filters" role="group" aria-label="Filter gallery">
+            <button class="gal-filter is-active" data-filter="all" type="button">All</button>
+            <button class="gal-filter" data-filter="file" type="button">Files</button>
+            <button class="gal-filter" data-filter="photo" type="button">Photos</button>
+            <button class="gal-filter" data-filter="video" type="button">Videos</button>
+          </div>
+
+        <div class="gallery-grid" id="galleryGrid">
+          <article class="g-item" data-cat="file">
+            <div class="g-media g-media--file"><svg class="g-media__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9l-6-6zM14 3v6h6"/><path d="M9 13h6M9 17h6"/></svg></div>
+            <div class="g-meta"><span class="g-tag">File</span><h4 class="g-name">UI_FRAMEWORK.sketch</h4><p class="g-sub">Source · 4.2 MB</p></div>
+          </article>
+
+          <article class="g-item g-item--tall" data-cat="video">
+            <div class="g-media g-media--video"><button class="g-play" type="button" aria-label="Preview video placeholder"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5l12 7-12 7V5z"/></svg></button></div>
+            <div class="g-meta"><span class="g-tag">Video</span><h4 class="g-name">SHOWREEL_V1.mp4</h4><p class="g-sub">1920 × 1080 · 00:24</p></div>
+          </article>
+
+          <article class="g-item" data-cat="photo">
+            <div class="g-media g-media--photo"><span class="g-media__flash" aria-hidden="true"></span></div>
+            <div class="g-meta"><span class="g-tag">Photo</span><h4 class="g-name">STUDIO_RENDER_01</h4><p class="g-sub">4K Still · 3840 × 2160</p></div>
+          </article>
+
+          <article class="g-item" data-cat="file">
+            <div class="g-media g-media--file"><svg class="g-media__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9l-6-6zM14 3v6h6"/><path d="M9 14h6M9 17h6"/></svg></div>
+            <div class="g-meta"><span class="g-tag">File</span><h4 class="g-name">VESSEL_PIPELINE.pdf</h4><p class="g-sub">Production Doc · 18 pp</p></div>
+          </article>
+
+          <article class="g-item" data-cat="video">
+            <div class="g-media g-media--video"><button class="g-play" type="button" aria-label="Preview video placeholder"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5l12 7-12 7V5z"/></svg></button></div>
+            <div class="g-meta"><span class="g-tag">Video</span><h4 class="g-name">WIP_PROTOTYPE_REEL.mp4</h4><p class="g-sub">1080p · 00:41</p></div>
+          </article>
+
+          <article class="g-item g-item--tall" data-cat="photo">
+            <div class="g-media g-media--photo g-media--photo-2"><span class="g-media__flash" aria-hidden="true"></span></div>
+            <div class="g-meta"><span class="g-tag">Photo</span><h4 class="g-name">BLACK_SERIES_02</h4><p class="g-sub">Editorial · 2400 × 1350</p></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+  <!-- ================= STUDIOS ================= -->
+    <section class="section studios" id="studios">
+      <div class="section-head">
+        <p class="sec-label"><span class="sec-label__num">03</span> Divisions</p>
+        <h2 class="sec-title" data-mask>Studios</h2>
+      </div>
+
+      <div class="studio-grid">
+        <article class="studio-card" data-group-item>
+          <p class="studio-card__index">/ 01</p>
+          <div class="studio-block" aria-hidden="true">
+            <span class="bar bar--red"></span><span class="bar"></span><span class="bar"></span><span class="bar"></span>
+          </div>
+          <h3 class="studio-card__name">Legion Red Studio<sup>™</sup></h3>
+          <p class="studio-card__tag">Visual Identity · Flagship</p>
+        </article>
+
+        <article class="studio-card" data-group-item>
+          <p class="studio-card__index">/ 02</p>
+          <div class="studio-block" aria-hidden="true">
+            <span class="bar"></span><span class="bar bar--red"></span><span class="bar"></span><span class="bar"></span>
+          </div>
+          <h3 class="studio-card__name">Legion Red Games<sup>™</sup></h3>
+          <p class="studio-card__tag">Production · Games</p>
+        </article>
+
+        <article class="studio-card" data-group-item>
+          <p class="studio-card__index">/ 03</p>
+          <div class="studio-block" aria-hidden="true">
+            <span class="bar"></span><span class="bar"></span><span class="bar bar--red"></span><span class="bar"></span>
+          </div>
+          <h3 class="studio-card__name">N1xkGames Studios<sup>™</sup></h3>
+          <p class="studio-card__tag">Core · UI &amp; Experience</p>
+        </article>
+
+        <article class="studio-card" data-group-item>
+          <p class="studio-card__index">/ 04</p>
+          <div class="studio-block" aria-hidden="true">
+            <span class="bar"></span><span class="bar"></span><span class="bar"></span><span class="bar bar--red"></span>
+          </div>
+          <h3 class="studio-card__name">8For4Games<sup>™</sup></h3>
+          <p class="studio-card__tag">Independent Output</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- ================= GAMES ================= -->
+    <section class="section games" id="games">
+      <div class="section-head">
+        <p class="sec-label"><span class="sec-label__num">04</span> Catalogue</p>
+        <h2 class="sec-title" data-mask>Featured Titles</h2>
+      </div>
+
+      <div class="games-grid">
+        <article class="feature-card" data-group-item>
+          <div class="feature-card__art" aria-hidden="true">
+            <span class="feature-card__sigil">VOB</span>
+          </div>
+          <div class="feature-card__body">
+            <span class="status-pill">Upcoming Title</span>
+            <h3 class="feature-card__title">Vessel of Bound</h3>
+            <p class="feature-card__desc">A flagship production currently in development — an atmospheric, design-led experience engineered for both desktop and the Roblox platform.</p>
+            <div class="platform-row">
+              <span class="platform-tag"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l8 4v12l-8 4-8-4V6l8-4zM6 7.5l6 3 6-3M12 10.5V20"/></svg> Steam</span>
+              <span class="platform-tag"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm-2 14.5l-4.5-2.6 1-1.7 3.5 2 3.5-2 1 1.7zm5.5-4.6a2 2 0 1 1 2-2 2 2 0 0 1-2 2z"/></svg> Roblox</span>
+            </div>
+          </div>
+        </article>
+
+        <div class="production-grid">
+          <article class="prod-card" data-group-item>
+            <span class="prod-card__num">Slot 01</span>
+            <h4 class="prod-card__name">Concept &amp; Worldbuilding</h4>
+            <span class="prod-card__line" aria-hidden="true"></span>
+            <p class="prod-card__status">Archive · Narrative</p>
+          </article>
+          <article class="prod-card" data-group-item>
+            <span class="prod-card__num">Slot 02</span>
+            <h4 class="prod-card__name">Core Systems</h4>
+            <span class="prod-card__line" aria-hidden="true"></span>
+            <p class="prod-card__status">Prototype · Scripting</p>
+          </article>
+          <article class="prod-card" data-group-item>
+            <span class="prod-card__num">Slot 03</span>
+            <h4 class="prod-card__name">Atmosphere &amp; Audio</h4>
+            <span class="prod-card__line" aria-hidden="true"></span>
+            <p class="prod-card__status">Tone · Direction</p>
+          </article>
+          <article class="prod-card" data-group-item>
+            <span class="prod-card__num">Slot 04</span>
+            <h4 class="prod-card__name">Interface Direction</h4>
+            <span class="prod-card__line" aria-hidden="true"></span>
+            <p class="prod-card__status">UI · Experience</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+  <!-- ================= CONTACT ================= -->
+    <section class="section contact" id="contact">
+      <div class="section-head">
+        <p class="sec-label"><span class="sec-label__num">05</span> Lines Open</p>
+        <h2 class="sec-title" data-mask>Establish Connection</h2>
+      </div>
+
+      <div class="contact-grid">
+        <a class="contact-card contact-card--mail" href="mailto:nickgamestheofc@gmail.com">
+          <span class="c-icon">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16a1 1 0 0 1 1 1v12a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V6a1 1 0 0 1 1-1z"/><path d="M3 7l9 6 9-6"/></svg>
+          </span>
+          <span class="c-plan">Primary — Gmail</span>
+          <span class="c-value">nickgamestheofc@gmail.com</span>
+          <span class="c-copy">Click to compose →</span>
+        </a>
+
+        <div class="contact-card contact-card--discord" data-copy="n1xkgames" role="button" tabindex="0" aria-label="Copy Discord handle n1xkgames">
+          <span class="c-icon">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19 5.5A16 16 0 0 0 15 4l-.3.6a11.5 11.5 0 0 1 4.4 2 13 13 0 0 0-12.2 0 11.5 11.5 0 0 1 4.4-2L11 4a16 16 0 0 0-4 .5C4.2 8 3.4 11.3 3.8 14.6A15.5 15.5 0 0 0 7.4 17l1.2-2a9.4 9.4 0 0 1-1.9-.9l.5-.4a11.4 11.4 0 0 0 9.6 0l.5.4a9.4 9.4 0 0 1-1.9.9l1.2 2a15.5 15.5 0 0 0 3.6-2.4c.5-3.9-.8-7.2-3.1-9.1zM8.7 12.5c-.7 0-1.3-.6-1.3-1.4s.6-1.4 1.3-1.4 1.3.6 1.3 1.4-.6 1.4-1.3 1.4zm6.6 0c-.7 0-1.3-.6-1.3-1.4s.6-1.4 1.3-1.4 1.3.6 1.3 1.4-.6 1.4-1.3 1.4z"/></svg>
+          </span>
+          <span class="c-plan">Direct — Discord</span>
+          <span class="c-value">n1xkgames</span>
+          <span class="c-copy">Click to copy handle</span>
+        </div>
+
+        <a class="contact-card contact-card--bio" href="https://guns.lol/n1xkgames" target="_blank" rel="noopener">
+          <span class="c-plan">Bio / More — All Links</span>
+          <span class="c-value">guns.lol/n1xkgames</span>
+          <span class="btn btn-solid btn-sm">Visit Hub
+            <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg>
+          </span>
+        </a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="footer">
+    <div class="footer__grid">
+      <a class="footer__logo" href="#hero">n1xkgames<span class="accent">.</span></a>
+      <p class="footer__note">Design-led. Script-driven. No noise — only signal.</p>
+      <ul class="footer__links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#vault">Vault</a></li>
+        <li><a href="#studios">Studios</a></li>
+        <li><a href="#games">Games</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <p class="footer__legal">© 2026 n1xkgames® — All rights reserved. Crafted with intent.</p>
+    </div>
+  </footer>
+
+  <!-- Motion libraries: GSAP + ScrollTrigger + Lenis smooth scroll (CDN) -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.14/dist/lenis.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
